@@ -1,0 +1,27 @@
+.banner {
+  background-image: url(../../logo/bannerbackground.png);
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-title {
+  color: black;
+}
+.search-box input {
+  border-radius: 15px;
+  text-align: center;
+  border: none;
+}
+.search-box {
+  position: relative;
+}
+.search-box .search-btn {
+  position: absolute;
+  top: 25px;
+  right: -45px;
+  border-radius: 35px;
+}
+.search-btn {
+  width: 100px;
+}
