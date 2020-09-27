@@ -1,0 +1,38 @@
+.logo img {
+  height: 65px;
+}
+.signup .form-control {
+  max-width: 410px;
+  margin: 0 auto;
+}
+.signup .sign-btn {
+  max-width: 410px;
+  margin: 0 auto;
+}
+.account label {
+  color: red;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  margin-left: 360px;
+}
+* {
+  box-sizing: border-box !important;
+}
+.signup {
+  background-image: url(../../logo/bannerbackground.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: center;
+  height: 680px;
+  padding-top: 90px !important;
+}
+.signup .form-control {
+  border: none;
+  padding: 23px !important;
+  color: #f1f1f1;
+}
+h4 {
+  margin-bottom: 0;
+}

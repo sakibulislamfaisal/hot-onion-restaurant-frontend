@@ -1,0 +1,22 @@
+.food-item .card-img-top {
+  width: 50%;
+  display: block;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+.card-body p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.card-body h4 {
+  margin-top: 9px;
+}
+.food-item .card {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
+.food-item .card:hover {
+  box-shadow: 15px 15px 60px whitesmoke;
+}

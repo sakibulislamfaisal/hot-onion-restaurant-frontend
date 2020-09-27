@@ -4,3 +4,12 @@
 .navbar {
   box-shadow: 5px 5px 4px whitesmoke;
 }
+.text {
+  font-size: 18px;
+  color: black !important;
+  font-weight: 500;
+}
+.nav-item button {
+  margin-top: -6px;
+  border-radius: 20px;
+}

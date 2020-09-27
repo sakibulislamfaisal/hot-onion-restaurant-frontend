@@ -1,0 +1,14 @@
+.food-section li {
+  color: black;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+.food-section .nav .active {
+  color: red !important;
+}
+.food-section .nav .active::after {
+  content: "";
+  height: 2px;
+  display: block;
+  background-color: red;
+}
