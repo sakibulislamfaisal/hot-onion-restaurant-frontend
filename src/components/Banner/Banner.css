@@ -9,7 +9,7 @@
   color: black;
 }
 .search-box input {
-  border-radius: 15px;
+  border-radius: 59px;
   text-align: center;
   border: none;
 }
@@ -20,8 +20,9 @@
   position: absolute;
   top: 25px;
   right: -45px;
-  border-radius: 35px;
+  border-radius: 45px;
 }
 .search-btn {
   width: 100px;
+  padding: 30px;
 }

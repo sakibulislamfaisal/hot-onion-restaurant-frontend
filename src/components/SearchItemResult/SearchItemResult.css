@@ -1,0 +1,8 @@
+.search::after {
+  background-color: red;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 170px;
+  margin: 0 auto;
+}
