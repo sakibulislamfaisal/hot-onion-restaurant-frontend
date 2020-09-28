@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/">
               <Header cart={cart}></Header>
               <Banner></Banner>
-              <Foods></Foods>
+              <Foods cart={cart}></Foods>
             </Route>
             <Route path="/login">
               <SignUp></SignUp>
