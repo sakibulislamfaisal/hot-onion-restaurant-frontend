@@ -13,3 +13,6 @@
   margin-top: -6px;
   border-radius: 20px;
 }
+.text:hover {
+  color: red !important;
+}

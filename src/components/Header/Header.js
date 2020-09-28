@@ -6,7 +6,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../logo/logo2.png";
 import { useAuth } from "../Login/useAuth";
 
-const Header = () => {
+const Header = (props) => {
   const auth = useAuth();
   return (
     <nav className="navbar navbar-expand navbar-light bg-white fixed-top py-2 ">
@@ -21,7 +21,7 @@ const Header = () => {
                 className="icon-header"
                 icon={faShoppingCart}
               ></FontAwesomeIcon>
-              <span className="badge badge-light"></span>
+              <span className="badge badge-light">{props.cart.length}</span>
             </Link>
           </li>
           <li className="nav-item">
