@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddToDatabase from "./components/AddToDatabase/AddToDatabase";
 import Banner from "./components/Banner/Banner";
 import Foods from "./components/Foods/Foods";
 import Header from "./components/Header/Header";
@@ -26,6 +27,10 @@ function App() {
               <Header cart={cart}></Header>
               <Banner></Banner>
               <SearchItemResult></SearchItemResult>
+            </Route>
+            <Route path="/addToDatabase">
+              <Header cart={cart}></Header>
+              <AddToDatabase></AddToDatabase>
             </Route>
           </Switch>
         </Router>
