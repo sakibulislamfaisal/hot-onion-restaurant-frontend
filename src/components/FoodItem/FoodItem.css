@@ -20,3 +20,7 @@
 .food-item .card:hover {
   box-shadow: 15px 15px 60px whitesmoke;
 }
+
+.food-item .navigation-food .card-body {
+  color: black !important;
+}

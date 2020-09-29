@@ -20,7 +20,12 @@ const AddToDatabase = () => {
       <hr className="border border-danger" />
       <button
         disabled
-        onClick={() => postData("http://localhost:4200/addfeature", feature)}
+        onClick={() =>
+          postData(
+            "https://hot-onion-restaurant-server.herokuapp.com/addfeature",
+            feature
+          )
+        }
         className="btn btn-secondary "
       >
         Add Feature

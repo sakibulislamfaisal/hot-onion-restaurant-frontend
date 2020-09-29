@@ -16,7 +16,7 @@ const Foods = (props) => {
   const categoryWiseFood = food.filter(
     (food) => food.category === selectedFood
   );
-  console.log(categoryWiseFood);
+  //console.log(categoryWiseFood);
   return (
     <>
       <section className="food-section py-4">

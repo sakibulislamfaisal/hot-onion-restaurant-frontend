@@ -1,0 +1,25 @@
+.footer img {
+  height: 65px;
+  margin-top: 90px;
+  color: white;
+}
+.footer {
+  height: 345px;
+}
+
+.footer-text .footer-text-title {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px !important;
+  margin: 40px;
+}
+.footer-text .footer-text-title:hover {
+  color: red !important;
+}
+strong {
+  font-weight: 400px;
+  font-size: 18px;
+}
+strong:hover {
+  color: whitesmoke !important;
+}
