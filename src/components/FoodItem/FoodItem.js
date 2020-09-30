@@ -7,7 +7,7 @@ const FoodItem = (props) => {
   return (
     <div className="col-md-4 food-item">
       <Link
-        to={`/food/${id}`}
+        to={"/singlefood/" + id}
         className="navigation-food"
         style={{ textDecoration: "none" }}
       >
@@ -17,7 +17,7 @@ const FoodItem = (props) => {
             <h5 className="card-title">{title}</h5>
             <p className="card-title">{subtitle}</p>
             <p className="card-title">{description}</p>
-            <h4 className="card-title">{price}</h4>
+            <h4 className="card-title">${price}</h4>
           </div>
         </div>
       </Link>

@@ -1,0 +1,44 @@
+.cart-item {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid blue;
+  height: 53px;
+}
+.cart-item .cart-quantity {
+  font-size: 20px !important;
+  padding: 10px;
+  font-weight: bold;
+}
+.cart-add-food .cart-add {
+  margin-top: 30px;
+  border-radius: 20px;
+  margin-left: -240px;
+}
+.success-msg {
+  animation: message 5s ease-in-out alternate;
+  margin-left: -100px;
+  margin-top: -33px !important;
+}
+@keyframes message {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.small-img {
+  cursor: pointer;
+  border: 1px solid green;
+  margin-top: -90px;
+}
+.small-img:hover {
+  opacity: 0.7;
+}

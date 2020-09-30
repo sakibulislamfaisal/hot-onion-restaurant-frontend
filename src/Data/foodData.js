@@ -7,7 +7,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587577085/lunch1_sjspys.png",
+      "https://i.ibb.co/prFCj77/lunch3.png",
   },
   {
     id: 102,
@@ -17,7 +17,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616040/lunch2_baxtsc.png",
+      "https://i.ibb.co/pX701Bg/lunch4.png",
   },
   {
     id: 103,
@@ -27,7 +27,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616040/lunch3_xm1qv0.png",
+      "https://i.ibb.co/F7CKNrj/lunch1.png",
   },
   {
     id: 104,
@@ -37,7 +37,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616041/lunch4_nwgfw8.png",
+      "https://i.ibb.co/zGTrGFw/lunch2.png",
   },
   {
     id: 105,
@@ -47,7 +47,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616041/lunch5_iphkr2.png",
+      "https://i.ibb.co/f85H3vz/lunch5.png",
   },
   {
     id: 106,
@@ -57,7 +57,7 @@ const foods = [
     category: "lunch",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616038/lunch6_eytzqm.png",
+      "https://i.ibb.co/Vpf4qPW/lunch6.png",
   },
   {
     id: 201,
@@ -67,7 +67,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616268/dinner1_r492es.png",
+      "https://i.ibb.co/BsmW04m/dinner1.png",
   },
   {
     id: 202,
@@ -77,7 +77,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616268/dinner2_zvzrvg.png",
+      "https://i.ibb.co/85FdR1G/dinner2.png",
   },
   {
     id: 203,
@@ -87,7 +87,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616265/dinner3_wfy3uf.png",
+      "https://i.ibb.co/7CNNcX6/dinner3.png",
   },
   {
     id: 204,
@@ -97,7 +97,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616277/dinner4_iitcjp.png",
+      "https://i.ibb.co/JB1JctT/dinner4.png",
   },
   {
     id: 205,
@@ -107,7 +107,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616269/dinner5_szk1tz.png",
+      "https://i.ibb.co/CBYXsWr/dinner5.png",
   },
   {
     id: 206,
@@ -117,7 +117,7 @@ const foods = [
     category: "dinner",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616265/dinner6_dfxdgt.png",
+      "https://i.ibb.co/KV78f0v/dinner6.png",
   },
   {
     id: 301,
@@ -127,7 +127,7 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616422/breakfast1_gzmwkz.png",
+      "https://i.ibb.co/pdfGzyp/breakfast1.png",
   },
   {
     id: 302,
@@ -137,7 +137,7 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616424/breakfast2_hmn59p.png",
+      "https://i.ibb.co/8bJV04d/breakfast2.png",
   },
   {
     id: 303,
@@ -147,7 +147,7 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616420/breakfast3_okdxvl.png",
+      "https://i.ibb.co/xjkVyVZ/breakfast3.png",
   },
   {
     id: 304,
@@ -157,7 +157,7 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616420/breakfast4_pud9ef.png",
+      "https://i.ibb.co/GPS1MS0/breakfast4.png",
   },
   {
     id: 305,
@@ -167,7 +167,7 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616421/breakfast5_ped42e.png",
+      "https://i.ibb.co/brDv96s/breakfast5.png",
   },
   {
     id: 306,
@@ -177,41 +177,8 @@ const foods = [
     category: "breakfast",
     description: "It is delicious food.We hope you can enjoy this food",
     img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616421/breakfast6_nyrquo.png",
+      "https://i.ibb.co/WfVDMQ2/breakfast6.png",
   },
 ];
 
-const chooseData = [
-  {
-    id: 401,
-    title: "Fast Delivery",
-    description:
-      "Keep your system om sync with automated web hook based notification each time link is paid and how we dream about our future",
-    img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616577/adult-blur-blurred-background-687824_fqw6ic.png",
-    icon:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616644/Group_245_oqdxto.png",
-  },
-  {
-    id: 402,
-    title: "A Good Auto Responder",
-    description:
-      "Keep your system om sync with automated web hook based notification each time link is paid and how we dream about our future",
-    img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616578/chef-cook-food-33614_aklvbh.png",
-    icon:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616644/Group_1133_sv3v7p.png",
-  },
-  {
-    id: 403,
-    title: "Home Delivery",
-    description:
-      "Keep your system om sync with automated web hook based notification each time link is paid and how we dream about our future",
-    img:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616577/architecture-building-city-2047397_kyphws.png",
-    icon:
-      "https://res.cloudinary.com/dtuj2anbo/image/upload/v1587616644/Group_204_oavbnp.png",
-  },
-];
-export { chooseData };
 export default foods;

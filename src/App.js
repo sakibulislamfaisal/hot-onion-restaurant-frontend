@@ -14,9 +14,24 @@ import SearchItemResult from "./components/SearchItemResult/SearchItemResult";
 
 function App() {
   const [cart, setCart] = useState([]);
+
+  //add to cart foods
+  const addToCartFood = (data) => {
+    const alreadyAdded = cart.find((item) => item.id === data.id);
+    // console.log(alreadyAdded);
+    const newCart = [...cart, data];
+    setCart(newCart);
+    if (alreadyAdded) {
+      const remainingCart = cart.filter((item) => item.id !== data.id);
+      setCart(remainingCart);
+    } else {
+      const newCart = [...cart, data];
+      setCart(newCart);
+    }
+  };
   return (
-    <div>
-      <AuthProvider>
+    <AuthProvider>
+      <div>
         <Router>
           <Switch>
             <Route exact path="/">
@@ -26,9 +41,13 @@ function App() {
               <Feature></Feature>
               <Footer></Footer>
             </Route>
-            <Route path="/food/:id">
+            <Route path="/singlefood/:id">
               <Header cart={cart}></Header>
-              <FoodDetail></FoodDetail>
+              <FoodDetail
+                cart={cart}
+                addToCartFood={addToCartFood}
+              ></FoodDetail>
+              <Footer></Footer>
             </Route>
             <Route path="/search/:searchItem">
               <Header cart={cart}></Header>
@@ -47,8 +66,8 @@ function App() {
             </Route>
           </Switch>
         </Router>
-      </AuthProvider>
-    </div>
+      </div>
+    </AuthProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import feature from "../../Data/featureData";
+import food from "../../Data/foodData";
 
 const AddToDatabase = () => {
   const postData = (url, data) => {
@@ -19,7 +20,6 @@ const AddToDatabase = () => {
       <h3 className="text-center">Database Management</h3>
       <hr className="border border-danger" />
       <button
-        disabled
         onClick={() =>
           postData(
             "https://hot-onion-restaurant-server.herokuapp.com/addfeature",
@@ -29,6 +29,17 @@ const AddToDatabase = () => {
         className="btn btn-secondary "
       >
         Add Feature
+      </button>
+      <button
+        onClick={() =>
+          postData(
+            "https://hot-onion-restaurant-server.herokuapp.com/addfood",
+            food
+          )
+        }
+        className="btn btn-secondary px-4 "
+      >
+        Add Food
       </button>
     </div>
   );

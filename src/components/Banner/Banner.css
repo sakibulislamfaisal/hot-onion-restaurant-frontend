@@ -18,11 +18,10 @@
 }
 .search-box .search-btn {
   position: absolute;
-  top: 25px;
-  right: -45px;
-  border-radius: 45px;
+  top: 23px;
+  right: -66px;
+  border-radius: 53px;
 }
 .search-btn {
-  width: 100px;
-  padding: 30px;
+  width: 120px;
 }
