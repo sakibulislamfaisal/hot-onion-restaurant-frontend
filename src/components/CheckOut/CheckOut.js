@@ -5,15 +5,31 @@ import "./CheckOut.css";
 
 const CheckOut = (props) => {
   const auth = useAuth();
-  console.log(auth);
+  // console.log(auth);
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     props.deliverHandleInfo(data);
     props.handleUserEmail(auth.user.email);
-    console.log(data);
+    // console.log(data);
   };
   const { todoor, road, flat, businessname, address } = props.deliveryInfo;
-  console.log(props.deliveryInfo);
+  //console.log(props.deliveryInfo);
+  //cart calculation
+  const totalQuantity = props.cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+  //console.log(totalQuantity);
+  const subTotal = props.cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+  //console.log(subTotal);
+  const tax = (subTotal / 100) * 5;
+  const deliveryFee = totalQuantity && 20;
+  const grandTotal = subTotal + tax + deliveryFee;
+  // console.log(grandTotal);
+
   return (
     <div className="shipment container py-5 mt-5">
       <div className="row">

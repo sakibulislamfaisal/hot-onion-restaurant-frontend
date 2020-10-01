@@ -75,6 +75,7 @@ function App() {
             <Route path="/checkout">
               <Header cart={cart}></Header>
               <CheckOut
+                cart={cart}
                 deliveryInfo={deliveryInfo}
                 deliverHandleInfo={deliverHandleInfo}
                 handleUserEmail={handleUserEmail}
