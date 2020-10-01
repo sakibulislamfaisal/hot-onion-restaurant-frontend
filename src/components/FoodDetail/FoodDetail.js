@@ -20,18 +20,20 @@ const FoodDetail = (props) => {
       .then((res) => res.json())
       .then((data) => setSingleFoodDetail(data))
       .catch((err) => console.log(err));
+    window.scrollTo(0, 0);
   }, [id]);
   // console.log(singleFoodDetail);
   const { title, price } = singleFoodDetail;
-  const handleCartAdd = () => {
+  const handleCartAdd = (singleFoodDetail) => {
     singleFoodDetail.quantity = quantity;
     foodCart(singleFoodDetail);
     setIsSuccess(true);
+    console.log(singleFoodDetail);
   };
   if (isSuccess) {
     setTimeout(() => setIsSuccess(false), 3000);
   }
-  console.log(singleFoodDetail);
+  //  console.log(singleFoodDetail);
   return (
     <div className="food-detail py-5 my-5 container">
       <div className="row">
@@ -50,7 +52,7 @@ const FoodDetail = (props) => {
             <div className="cart-item ml-4">
               <button
                 className="btn mr-4 cart-quantity"
-                onClick={() => setQuantity(quantity <= 1 ? 1 : quantity - 1)}
+                onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
               >
                 -
               </button>
@@ -65,7 +67,7 @@ const FoodDetail = (props) => {
             <div className="cart-add-food py-5 ">
               <button
                 className="btn btn-danger cart-add"
-                onClick={handleCartAdd}
+                onClick={() => handleCartAdd(singleFoodDetail)}
               >
                 <FontAwesomeIcon icon={faShoppingCart} /> Add To Cart
               </button>

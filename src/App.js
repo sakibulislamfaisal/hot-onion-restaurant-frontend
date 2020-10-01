@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddToDatabase from "./components/AddToDatabase/AddToDatabase";
 import Banner from "./components/Banner/Banner";
+import CheckOut from "./components/CheckOut/CheckOut";
 import Feature from "./components/Feature/Feature";
 import FoodDetail from "./components/FoodDetail/FoodDetail";
 import Foods from "./components/Foods/Foods";
@@ -17,17 +18,24 @@ function App() {
 
   //add to cart foods
   const addToCartFood = (data) => {
-    const alreadyAdded = cart.find((item) => item.id === data.id);
-    // console.log(alreadyAdded);
+    const isAddedAlready = cart.find((pd) => pd.id === data.id);
     const newCart = [...cart, data];
-    setCart(newCart);
-    if (alreadyAdded) {
-      const remainingCart = cart.filter((item) => item.id !== data.id);
-      setCart(remainingCart);
-    } else {
-      const newCart = [...cart, data];
+    if (!isAddedAlready) {
       setCart(newCart);
     }
+    // const alreadyAdded = cart.find((item) => item.id === data.id);
+    // // console.log(alreadyAdded);
+    // const newCart = [...cart, data];
+    // setCart(newCart);
+    // if()
+    // // if (!alreadyAdded) {
+    //   const remainingCart = cart.filter((item) => item.id !== data.id);
+    //   setCart(remainingCart);
+    // }
+    // } else {
+    //   const newCart = [...cart, data];
+    //   setCart(newCart);
+    // }
   };
   return (
     <AuthProvider>
@@ -47,6 +55,11 @@ function App() {
                 cart={cart}
                 addToCartFood={addToCartFood}
               ></FoodDetail>
+              <Footer></Footer>
+            </Route>
+            <Route path="/checkout">
+              <Header cart={cart}></Header>
+              <CheckOut></CheckOut>
               <Footer></Footer>
             </Route>
             <Route path="/search/:searchItem">

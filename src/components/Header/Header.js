@@ -16,12 +16,9 @@ const Header = (props) => {
         </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <Link className="nav-link">
-              <FontAwesomeIcon
-                className="icon-header"
-                icon={faShoppingCart}
-              ></FontAwesomeIcon>
-              <span className="badge badge-light">{props.cart.length}</span>
+            <Link to="/checkout" className="nav-link">
+              <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
+              <span className="badge bg-light">{props.cart.length}</span>
             </Link>
           </li>
           <li className="nav-item">
