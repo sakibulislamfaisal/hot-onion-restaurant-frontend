@@ -1,16 +1,29 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../Login/useAuth";
 import "./CheckOut.css";
 
-const CheckOut = () => {
+const CheckOut = (props) => {
+  const auth = useAuth();
+  console.log(auth);
   const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = (data) => {
+    props.deliverHandleInfo(data);
+    props.handleUserEmail(auth.user.email);
+    console.log(data);
+  };
+  const { todoor, road, flat, businessname, address } = props.deliveryInfo;
+  console.log(props.deliveryInfo);
   return (
     <div className="shipment container py-5 mt-5">
       <div className="row">
         <div className="col-md-6 mt-5 text-center">
           <h4>Edit Delivery Details</h4>
           <hr className="border border-danger" />
-          <form className="py-5 delivery-info">
+          <form
+            className="py-5 delivery-info"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className="form-group">
               <input
                 name="todoor"
@@ -46,12 +59,12 @@ const CheckOut = () => {
             </div>
             <div className="form-group">
               <input
-                name="business"
+                name="businessname"
                 className="form-control"
                 ref={register({ required: true })}
                 placeholder="Business name"
               />
-              {errors.business && (
+              {errors.businessname && (
                 <span className="error">Business name is required</span>
               )}
             </div>

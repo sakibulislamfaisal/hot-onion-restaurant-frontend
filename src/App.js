@@ -15,6 +15,21 @@ import SearchItemResult from "./components/SearchItemResult/SearchItemResult";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [deliveryInfo, setDeliveryInfo] = useState({
+    todoor: null,
+    road: null,
+    flat: null,
+    businessname: null,
+    address: null,
+  });
+  const [userEmail, setUserEmail] = useState(null);
+  const deliverHandleInfo = (data) => {
+    setDeliveryInfo(data);
+  };
+
+  const handleUserEmail = (email) => {
+    setUserEmail(email);
+  };
 
   //add to cart foods
   const addToCartFood = (data) => {
@@ -59,7 +74,11 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Header cart={cart}></Header>
-              <CheckOut></CheckOut>
+              <CheckOut
+                deliveryInfo={deliveryInfo}
+                deliverHandleInfo={deliverHandleInfo}
+                handleUserEmail={handleUserEmail}
+              ></CheckOut>
               <Footer></Footer>
             </Route>
             <Route path="/search/:searchItem">
