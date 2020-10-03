@@ -8,3 +8,9 @@
 .form-group {
   padding: 10px;
 }
+.form-group .error {
+  margin-left: -1px !important;
+}
+.right {
+  margin-top: 220px;
+}

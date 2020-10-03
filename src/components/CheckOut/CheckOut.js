@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../Login/useAuth";
 import "./CheckOut.css";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Payment from "../Payment/Payment";
+import { Link } from "react-router-dom";
 
 const CheckOut = (props) => {
   const auth = useAuth();
-  // console.log(auth);
+  const stripePromise = loadStripe(
+    "pk_test_5u4MdV0k3HrcnkqeNfD3MCIF007tWoO0eL"
+  );
+  const [paid, setPaid] = useState(null);
+  const paidTo = (paymentInfo) => {
+    setPaid(paymentInfo);
+  };
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data, e) => {
+  const onSubmit = (data) => {
     props.deliverHandleInfo(data);
     props.handleUserEmail(auth.user.email);
-    // console.log(data);
+    console.log(data);
   };
   const { todoor, road, flat, businessname, address } = props.deliveryInfo;
   //console.log(props.deliveryInfo);
@@ -33,8 +43,8 @@ const CheckOut = (props) => {
   return (
     <div className="shipment container py-5 mt-5">
       <div className="row">
-        <div className="col-md-6 mt-5 text-center">
-          <h4>Edit Delivery Details</h4>
+        <div className="col-md-6 mt-5 ">
+          <h4 className="text-center">Edit Delivery Details</h4>
           <hr className="border border-danger" />
           <form
             className="py-5 delivery-info"
@@ -42,6 +52,7 @@ const CheckOut = (props) => {
           >
             <div className="form-group">
               <input
+                defaultValue={todoor}
                 name="todoor"
                 className="form-control"
                 ref={register({ required: true })}
@@ -53,6 +64,7 @@ const CheckOut = (props) => {
             </div>
             <div className="form-group">
               <input
+                defaultValue={road}
                 name="road"
                 className="form-control"
                 ref={register({ required: true })}
@@ -64,6 +76,7 @@ const CheckOut = (props) => {
             </div>
             <div className="form-group">
               <input
+                defaultValue={flat}
                 name="flat"
                 className="form-control"
                 ref={register({ required: true })}
@@ -75,6 +88,7 @@ const CheckOut = (props) => {
             </div>
             <div className="form-group">
               <input
+                defaultValue={businessname}
                 name="businessname"
                 className="form-control"
                 ref={register({ required: true })}
@@ -86,6 +100,7 @@ const CheckOut = (props) => {
             </div>
             <div className="form-group">
               <textarea
+                defaultValue={address}
                 name="address"
                 col="25"
                 className="form-control"
@@ -109,3 +124,4 @@ const CheckOut = (props) => {
 };
 
 export default CheckOut;
+//pk_test_5u4MdV0k3HrcnkqeNfD3MCIF007tWoO0eL
