@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../Login/useAuth";
 import "./CheckOut.css";
@@ -16,6 +16,7 @@ const CheckOut = (props) => {
   const paidTo = (paymentInfo) => {
     setPaid(paymentInfo);
   };
+
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
     props.deliverHandleInfo(data);
@@ -43,7 +44,15 @@ const CheckOut = (props) => {
   return (
     <div className="shipment container py-5 mt-5">
       <div className="row">
-        <div className="col-md-6 mt-5 ">
+        <div
+          className="col-md-6 mt-5 "
+          style={{
+            display:
+              todoor && road && flat && businessname && address
+                ? "none"
+                : "block",
+          }}
+        >
           <h4 className="text-center">Edit Delivery Details</h4>
           <hr className="border border-danger" />
           <form
@@ -117,6 +126,19 @@ const CheckOut = (props) => {
               </button>
             </div>
           </form>
+        </div>
+        <div
+          style={{
+            display:
+              todoor && road && flat && businessname && address
+                ? "block"
+                : "none",
+          }}
+          className="col-md-6 py-5 mt-5"
+        >
+          <Elements stripe={stripePromise}>
+            <Payment paidTo={paidTo} />
+          </Elements>
         </div>
       </div>
     </div>
