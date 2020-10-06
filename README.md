@@ -4,7 +4,7 @@
 
 A single page restaurant app where people are able to select food in their cart and checkout the cart with their information.
 
-[Live Website](https://hot-onion-restaurant-frontend.firebaseapp.com) | [Live API Server](https://hot-onion-restaurant-server.herokuapp.com/)
+[Live Website](https://hot-onion-restaurant-frontend.web.app/) | [Live API Server](https://hot-onion-restaurant-server.herokuapp.com/)
 
 ### Features
 
