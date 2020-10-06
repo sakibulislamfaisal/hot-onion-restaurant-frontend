@@ -4,7 +4,7 @@
 
 A single page restaurant app where people are able to select food in their cart and checkout the cart with their information.
 
-[Live Website](hot-onion-restaurant-frontend.firebaseapp.com/) | [Live API Server](https://hot-onion-restaurant-server.herokuapp.com/)
+[Live Website](https://hot-onion-restaurant-frontend.firebaseapp.com) | [Live API Server](https://hot-onion-restaurant-server.herokuapp.com/)
 
 ### Features
 
@@ -12,7 +12,7 @@ A single page restaurant app where people are able to select food in their cart 
 - Sign Up to place order
 - Pay online using your Stripe credit card
 
-### Front-end Thechnology :
+### Front-end Technology :
 
 - React.js
 - Bootstrap4

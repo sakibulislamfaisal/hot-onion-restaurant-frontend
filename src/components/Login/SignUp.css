@@ -13,10 +13,11 @@
   color: red;
   cursor: pointer;
 }
-.error {
+.form-group .error {
+  margin-left: 345px !important;
   color: red;
-  margin-left: 360px;
 }
+
 * {
   box-sizing: border-box !important;
 }
@@ -25,7 +26,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: center;
-  height: 680px;
   padding-top: 90px !important;
 }
 .signup .form-control {

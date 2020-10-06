@@ -131,7 +131,7 @@ const SignUp = () => {
                 Sign Up
               </button>
             </div>
-            <div className="account text-center">
+            <div className="account text-center ">
               <label onClick={() => setLoggedInUser(true)}>
                 Already Have an Account
               </label>

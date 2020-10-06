@@ -40,19 +40,6 @@ function App() {
     if (!isAddedAlready) {
       setCart(newCart);
     }
-    // const alreadyAdded = cart.find((item) => item.id === data.id);
-    // // console.log(alreadyAdded);
-    // const newCart = [...cart, data];
-    // setCart(newCart);
-    // if()
-    // // if (!alreadyAdded) {
-    //   const remainingCart = cart.filter((item) => item.id !== data.id);
-    //   setCart(remainingCart);
-    // }
-    // } else {
-    //   const newCart = [...cart, data];
-    //   setCart(newCart);
-    // }
   };
 
   const checkOutItem = (foodId, foodQuantity) => {
