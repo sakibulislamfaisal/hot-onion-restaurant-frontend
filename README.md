@@ -25,5 +25,3 @@ A single page restaurant app where people are able to select food in their cart 
 - MongoDB
 - Firebase Authentication
 - Stripe.js
-
-[Back-end Repository](https://github.com/solaimanshadin/red-onion-backend)
