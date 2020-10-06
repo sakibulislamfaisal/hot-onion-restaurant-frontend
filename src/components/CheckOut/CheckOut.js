@@ -53,7 +53,7 @@ const CheckOut = (props) => {
                 : "block",
           }}
         >
-          <h4 className="text-center">Edit Delivery Details</h4>
+          <h4 className="text-center">Edit Delivery Detail Info</h4>
           <hr className="border border-danger" />
           <form
             className="py-5 delivery-info"
@@ -134,7 +134,7 @@ const CheckOut = (props) => {
                 ? "block"
                 : "none",
           }}
-          className="col-md-6 py-5 mt-5"
+          className="col-md-5 py-5 mt-5"
         >
           <Elements stripe={stripePromise}>
             <Payment paidTo={paidTo} />
