@@ -52,6 +52,18 @@ function App() {
     //   setCart(newCart);
     // }
   };
+
+  const checkOutItem = (foodId, foodQuantity) => {
+    const newCart = cart.map((item) => {
+      if (item.id == foodId) {
+        item.quantity = foodQuantity;
+      }
+      return item;
+    });
+
+    const filteredCart = newCart.filter((item) => item.quantity > 0);
+    setCart(filteredCart);
+  };
   return (
     <AuthProvider>
       <div>
@@ -79,6 +91,7 @@ function App() {
                 deliveryInfo={deliveryInfo}
                 deliverHandleInfo={deliverHandleInfo}
                 handleUserEmail={handleUserEmail}
+                checkOutItem={checkOutItem}
               ></CheckOut>
               <Footer></Footer>
             </Route>

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../Login/useAuth";
 import "./CheckOut.css";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Payment from "../Payment/Payment";
-import { Link } from "react-router-dom";
 
 const CheckOut = (props) => {
+  console.log(props.cart.length);
   const auth = useAuth();
   const stripePromise = loadStripe(
     "pk_test_5u4MdV0k3HrcnkqeNfD3MCIF007tWoO0eL"
@@ -139,6 +139,53 @@ const CheckOut = (props) => {
           <Elements stripe={stripePromise}>
             <Payment paidTo={paidTo} />
           </Elements>
+        </div>
+        <div className="col-md-6 py-3 ">
+          <div className="info mb-5">
+            <h3 className="text-center">Hot Onion Restaurant</h3>
+            <h6 className="text-center">Delivery with in the 30-40 minute</h6>
+          </div>
+          {props.cart.map((item) => (
+            <div className="single-item rounded d-flex align-items-center justify-content-between p-2 bg-light">
+              <img
+                src={item.img}
+                width="110px"
+                className="single-image"
+                alt=""
+              />
+              <div>
+                <h4>{item.title}</h4>
+                <h3>{item.price}</h3>
+                <p>Delivery free</p>
+              </div>
+              <div className="checkout-btn ml-3 btn">
+                <button
+                  onClick={() => props.checkOutItem(item.id, item.quantity + 1)}
+                  className="btn font-weight-bolder"
+                >
+                  +
+                </button>
+                <button className="btn bg-white rounded">
+                  {item.quantity}
+                </button>
+
+                {item.quantity > 0 ? (
+                  <button
+                    className="btn font-weight-bolder"
+                    onClick={() =>
+                      props.checkOutItem(item.id, item.quantity - 1)
+                    }
+                  >
+                    -
+                  </button>
+                ) : (
+                  <button disabled className="btn font-weight-bolder">
+                    -
+                  </button>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
