@@ -31,7 +31,7 @@ const SignUp = () => {
           </Link>
         </div>
         {loggedInUser ? (
-          <form onSubmit={handleSubmit(onSubmit)} className="py-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="py-3">
             <h4 className="text-center">Login Panel</h4>
             {auth.user != null && (
               <p className="text-danger error">{auth.user.error}</p>
@@ -73,7 +73,7 @@ const SignUp = () => {
             </div>
           </form>
         ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="py-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="py-3">
             <h4 className="text-center">New Account</h4>
             {auth.user != null && (
               <p className="text-danger error">{auth.user.error}</p>

@@ -5,6 +5,7 @@ import "./CheckOut.css";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Payment from "../Payment/Payment";
+import { Link } from "react-router-dom";
 
 const CheckOut = (props) => {
   console.log(props.cart.length);
@@ -140,22 +141,23 @@ const CheckOut = (props) => {
             <Payment paidTo={paidTo} />
           </Elements>
         </div>
-        <div className="col-md-6 py-3 ">
+        <div className="col-md-6 py-5 ">
           <div className="info mb-5">
             <h3 className="text-center">Hot Onion Restaurant</h3>
             <h6 className="text-center">Delivery with in the 30-40 minute</h6>
+            <h6 className="text-center">Happy Delivery Food</h6>
           </div>
           {props.cart.map((item) => (
             <div className="single-item rounded d-flex align-items-center justify-content-between p-2 bg-light">
               <img
                 src={item.img}
-                width="110px"
-                className="single-image"
+                width="120px"
+                className="single-image py-2"
                 alt=""
               />
-              <div>
-                <h4>{item.title}</h4>
-                <h3>{item.price}</h3>
+              <div className="text-center" style={{ fontSize: "16px" }}>
+                <p>{item.title}</p>
+                <h6 className="text-danger">{item.price}</h6>
                 <p>Delivery free</p>
               </div>
               <div className="checkout-btn ml-3 btn">
@@ -186,6 +188,41 @@ const CheckOut = (props) => {
               </div>
             </div>
           ))}
+          <div className="cart-calculation py-5 mt-4">
+            <p className="d-flex justify-content-between">
+              <span>Sub Total . {totalQuantity} Item</span>{" "}
+              <span>${subTotal.toFixed(2)}</span>
+            </p>
+            <p className="d-flex justify-content-between">
+              <span>Tax</span> <span>${tax.toFixed(2)}</span>
+            </p>
+            <p className="d-flex justify-content-between">
+              <span>Delivery Fee</span> <span>${deliveryFee}</span>
+            </p>
+            <p className="h5 d-flex justify-content-between">
+              <span>Total</span> <span>${grandTotal.toFixed(2)}</span>
+            </p>
+            {totalQuantity ? (
+              paid ? (
+                <Link to="/order-complete">
+                  <button
+                    onClick={() => props.clearCart()}
+                    className="btn btn-block btn-danger btn-secondary py-2"
+                  >
+                    CheckOut Food
+                  </button>
+                </Link>
+              ) : (
+                <button disabled className="btn btn-block btn-secondary py-2">
+                  CheckOut Your Food
+                </button>
+              )
+            ) : (
+              <button disabled className="btn btn-block btn-secondary py-2">
+                Nothing is here
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

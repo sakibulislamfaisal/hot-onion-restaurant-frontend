@@ -9,12 +9,14 @@ import Foods from "./components/Foods/Foods";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import SignUp from "./components/Login/SignUp";
-import { AuthProvider } from "./components/Login/useAuth";
+import { AuthProvider, PrivateRoute } from "./components/Login/useAuth";
 import NotFound from "./components/NotFound/NotFound";
+import OrderComplete from "./components/OrderComplete/OrderComplete";
 import SearchItemResult from "./components/SearchItemResult/SearchItemResult";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [orderId, setOrderId] = useState(null);
   const [deliveryInfo, setDeliveryInfo] = useState({
     todoor: null,
     road: null,
@@ -64,6 +66,27 @@ function App() {
     const filteredCart = newCart.filter((item) => item.quantity > 0);
     setCart(filteredCart);
   };
+
+  const clearCart = () => {
+    const orderedItems = cart.map((cartItem) => {
+      return { food_id: cartItem.id, quantity: cartItem.quantity };
+    });
+
+    const orderDetailsData = { userEmail, orderedItems, deliveryInfo };
+    fetch("https://hot-onion-restaurant-server.herokuapp.com/submitorder", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(orderDetailsData),
+    })
+      .then((res) => res.json())
+      .then((data) => setOrderId(data._id));
+    console.log(orderId);
+
+    setCart([]);
+  };
+
   return (
     <AuthProvider>
       <div>
@@ -84,7 +107,7 @@ function App() {
               ></FoodDetail>
               <Footer></Footer>
             </Route>
-            <Route path="/checkout">
+            <PrivateRoute path="/checkout">
               <Header cart={cart}></Header>
               <CheckOut
                 cart={cart}
@@ -92,9 +115,15 @@ function App() {
                 deliverHandleInfo={deliverHandleInfo}
                 handleUserEmail={handleUserEmail}
                 checkOutItem={checkOutItem}
+                clearCart={clearCart}
               ></CheckOut>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/order-complete">
+              <Header cart={cart} />
+              <OrderComplete deliveryInfo={deliveryInfo} orderId={orderId} />
+              <Footer />
+            </PrivateRoute>
             <Route path="/search/:searchItem">
               <Header cart={cart}></Header>
               <Banner></Banner>
